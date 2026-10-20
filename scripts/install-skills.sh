@@ -38,13 +38,17 @@ else
 fi
 
 repos=()
+skills_for=()
 for sel in "${selectors[@]}"; do
   matched=0
-  while read -r repo group _; do
+  while read -r repo group skills _; do
     [[ -z "$repo" || "$repo" == \#* ]] && continue
     if [[ $sel == all || $sel == "$group" || $sel == "$repo" ]]; then
       matched=1
-      [[ " ${repos[*]-} " == *" $repo "* ]] || repos+=("$repo")
+      if [[ " ${repos[*]-} " != *" $repo "* ]]; then
+        repos+=("$repo")
+        skills_for+=("${skills:-*}")
+      fi
     fi
   done <<<"$list"
   if [[ $matched == 0 ]]; then
@@ -54,7 +58,9 @@ for sel in "${selectors[@]}"; do
 done
 
 failed=()
-for repo in "${repos[@]}"; do
+for i in "${!repos[@]}"; do
+  repo="${repos[$i]}"
+  IFS=, read -r -a skills <<<"${skills_for[$i]}"
   source="$repo"
   # Use this checkout for the toolkit's own skills, and skip it while it has none.
   if [[ $repo == "$REPO" && -d "$script_dir/../skills" ]]; then
@@ -65,7 +71,7 @@ for repo in "${repos[@]}"; do
     source="$(cd "$script_dir/.." && pwd)"
   fi
   echo "==> $repo"
-  npx -y skills add "$source" --skill '*' --agent "${agents[@]}" ${global[@]+"${global[@]}"} --yes \
+  npx -y skills add "$source" --skill "${skills[@]}" --agent "${agents[@]}" ${global[@]+"${global[@]}"} --yes \
     || failed+=("$repo")
 done
 

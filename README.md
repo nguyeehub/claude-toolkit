@@ -9,6 +9,7 @@ My skills, plugins and MCP servers for coding agents, in one repo. It works with
 | My own skills | core | [`skills/`](skills) | | `my-skills` |
 | Matt Pocock | core | [mattpocock/skills](https://github.com/mattpocock/skills) | | `mattpocock-skills` |
 | Emil Kowalski | core | [emilkowalski/skills](https://github.com/emilkowalski/skills) | | `emil-design-eng` |
+| Taste Skill | core | [`design-taste-frontend`](https://github.com/Leonxlnx/taste-skill) | | `taste-skill` |
 | Vercel | platform | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | `https://mcp.vercel.com` | `vercel` |
 | Neon | platform | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) | `https://mcp.neon.tech/mcp` | `neon` |
 | Supabase | platform | [supabase/agent-skills](https://github.com/supabase/agent-skills) | `https://mcp.supabase.com/mcp` | `supabase` |
@@ -77,7 +78,7 @@ Locally, the plugins bundle skills, MCP and hooks together.
 ## Add things
 
 - **Your own skill:** add `skills/<name>/SKILL.md`, with `name` and `description` in its frontmatter. It reaches every agent through `npx skills`, and Claude Code through the `my-skills` plugin.
-- **Someone else's skill repo:** add a line to [`skills.txt`](skills.txt), and an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) for Claude Code. If the repo has no plugin manifest, give its entry `"strict": false` and Claude Code will find its `skills/` folder, as with `emil-design-eng`.
+- **Someone else's skill repo:** add a line to [`skills.txt`](skills.txt) (add a comma-separated skill list after the group to install only those skills), and an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) for Claude Code. If the repo has no plugin manifest, give its entry `"strict": false` and Claude Code will find its `skills/` folder, as with `emil-design-eng`.
 - **An MCP server:** add it to [`mcp.json`](mcp.json).
 - **Check it:** run `claude plugin validate .`.
 

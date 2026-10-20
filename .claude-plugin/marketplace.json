@@ -34,6 +34,17 @@
       "category": "core"
     },
     {
+      "name": "taste-skill",
+      "description": "Leonxlnx's design-taste-frontend skill: art direction and anti-slop polish for websites, dashboards and app screens.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Leonxlnx/taste-skill.git"
+      },
+      "homepage": "https://github.com/Leonxlnx/taste-skill",
+      "strict": false,
+      "category": "core"
+    },
+    {
       "name": "vercel",
       "description": "Vercel skills, hooks and MCP server.",
       "source": {

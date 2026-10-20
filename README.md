@@ -45,19 +45,31 @@ curl -fsSL https://raw.githubusercontent.com/nguyeehub/claude-toolkit/main/scrip
 
 Every server signs in with OAuth on first use, except GitHub, which reads `GITHUB_PERSONAL_ACCESS_TOKEN`.
 
-### Claude Code: plugins
+### Claude Code cloud sessions
 
-In Claude Code, the plugins bundle skills, MCP and hooks together, and cloud sessions install them on their own.
+Cloud sessions don't load plugins, whether they're enabled in a repo's settings or in user settings. They do load skills from `~/.claude/skills`, so install the skills there from the environment's setup script. Paste this into the **Setup script** field of your cloud environment, e.g. **Default**, so it applies to every repo:
+
+```bash
+#!/bin/bash
+curl -fsSL https://raw.githubusercontent.com/nguyeehub/claude-toolkit/main/scripts/install-skills.sh \
+  | bash -s -- --global --agent claude-code all || true
+```
+
+For MCP in cloud sessions, use claude.ai connectors, or commit a project `.mcp.json` built from [`mcp.json`](mcp.json).
+
+### Claude Code on your machine: plugins
+
+Locally, the plugins bundle skills, MCP and hooks together.
 
 - **Just one plugin:**
   ```
   /plugin install my-skills --marketplace nguyeehub/claude-toolkit
   ```
-- **One project.** Commit the result, and every cloud session on that repo gets these plugins:
+- **One project:** turn the plugins on in the project's `.claude/settings.json`, and commit it so collaborators get them too. This doesn't reach cloud sessions.
   ```bash
   ~/coding\ projects/claude-toolkit/scripts/install.sh --project . core vercel neon
   ```
-- **Machine-wide**, e.g. in a cloud environment's setup script:
+- **Every project on this machine:**
   ```bash
   curl -fsSL https://raw.githubusercontent.com/nguyeehub/claude-toolkit/main/scripts/install.sh | bash -s -- --global core
   ```
@@ -75,7 +87,7 @@ Nothing is pinned, so everything tracks each upstream repo's default branch.
 
 | Where | How you get updates |
 | --- | --- |
-| Claude Code cloud sessions | Automatic. Each session installs fresh. |
+| Claude Code cloud sessions | The setup script's result is cached for about 7 days, then rebuilt with the latest. Edit the setup script (even a comment) to rebuild sooner. |
 | Claude Code on your machine | `claude plugin marketplace update claude-toolkit`, then `claude plugin update <name>@claude-toolkit` |
 | Other agents | `npx skills update`, or rerun `install-skills.sh` |
 

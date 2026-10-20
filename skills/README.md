@@ -9,4 +9,4 @@ skills/
     ...           # any supporting files the skill references
 ```
 
-They show up as `my-skills:<name>` everywhere the toolkit is installed.
+Claude Code shows them as `my-skills:<name>`. Other agents get them through `npx skills`.

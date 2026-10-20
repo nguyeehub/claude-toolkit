@@ -1,0 +1,11 @@
+# Skill repos for any agent, installed with `npx skills`.
+# One per line: <github owner/repo> <group>
+# Groups: core (always useful), platform (only for projects on that platform).
+
+nguyeehub/claude-toolkit   core
+mattpocock/skills          core
+emilkowalski/skills        core
+
+vercel-labs/agent-skills   platform
+neondatabase/agent-skills  platform
+supabase/agent-skills      platform

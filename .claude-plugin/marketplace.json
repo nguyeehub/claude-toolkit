@@ -3,25 +3,32 @@
   "owner": {
     "name": "nguyeehub"
   },
-  "description": "My Claude Code skills and plugins, in one place for local, project and cloud sessions.",
+  "description": "My skills, plugins and MCP servers for coding agents.",
   "plugins": [
     {
       "name": "my-skills",
-      "description": "My own skills. Add a folder under plugins/my-skills/skills/<name>/SKILL.md.",
-      "source": "./plugins/my-skills",
-      "category": "core"
+      "description": "My own skills from the top-level skills/ folder.",
+      "source": "./",
+      "category": "core",
+      "strict": false
     },
     {
       "name": "mattpocock-skills",
       "description": "Matt Pocock's engineering skills: grilling, TDD, code review, domain modelling and more.",
-      "source": { "source": "url", "url": "https://github.com/mattpocock/skills.git" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mattpocock/skills.git"
+      },
       "homepage": "https://github.com/mattpocock/skills",
       "category": "core"
     },
     {
       "name": "emil-design-eng",
       "description": "Emil Kowalski's design engineering skills: animation, UI polish, prototyping, Apple-style design.",
-      "source": { "source": "url", "url": "https://github.com/emilkowalski/skills.git" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/emilkowalski/skills.git"
+      },
       "homepage": "https://github.com/emilkowalski/skills",
       "strict": false,
       "category": "core"
@@ -29,7 +36,10 @@
     {
       "name": "vercel",
       "description": "Vercel skills, hooks and MCP server.",
-      "source": { "source": "url", "url": "https://github.com/vercel/vercel-plugin.git" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/vercel/vercel-plugin.git"
+      },
       "homepage": "https://github.com/vercel/vercel-plugin",
       "category": "platform"
     },
@@ -48,7 +58,10 @@
     {
       "name": "supabase",
       "description": "Supabase skills and MCP server.",
-      "source": { "source": "url", "url": "https://github.com/supabase-community/supabase-plugin.git" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/supabase-community/supabase-plugin.git"
+      },
       "homepage": "https://github.com/supabase-community/supabase-plugin",
       "category": "platform"
     },

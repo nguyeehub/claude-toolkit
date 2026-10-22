@@ -45,6 +45,16 @@
       "category": "core"
     },
     {
+      "name": "hyperframes",
+      "description": "HeyGen's HyperFrames skills: write HTML, render video. Compositions, animation, captions, voiceover, media and slideshows.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/heygen-com/hyperframes.git"
+      },
+      "homepage": "https://github.com/heygen-com/hyperframes",
+      "category": "content"
+    },
+    {
       "name": "vercel",
       "description": "Vercel skills, hooks and MCP server.",
       "source": {

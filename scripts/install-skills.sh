@@ -3,7 +3,7 @@
 #
 #   install-skills.sh [--global] [--agent "cursor codex ..."] [GROUP|REPO ...]
 #
-# GROUP is a group from skills.txt (core, platform) or "all". Defaults to "core".
+# GROUP is a group from skills.txt (core, platform, content) or "all". Defaults to "core".
 # --agent defaults to every agent `npx skills` supports.
 #
 # Examples:

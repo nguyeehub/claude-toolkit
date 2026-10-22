@@ -1,7 +1,8 @@
 # Skill repos for any agent, installed with `npx skills`.
 # One per line: <github owner/repo> <group> [skill,skill,...]
 # The skill list is optional; without it every skill in the repo is installed.
-# Groups: core (always useful), platform (only for projects on that platform).
+# Groups: core (always useful), platform (only for projects on that platform),
+# content (video and media making).
 
 nguyeehub/claude-toolkit   core
 mattpocock/skills          core
@@ -11,3 +12,5 @@ Leonxlnx/taste-skill       core      design-taste-frontend
 vercel-labs/agent-skills   platform
 neondatabase/agent-skills  platform
 supabase/agent-skills      platform
+
+heygen-com/hyperframes     content

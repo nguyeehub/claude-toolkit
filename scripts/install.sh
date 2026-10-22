@@ -3,7 +3,7 @@
 #
 #   install.sh [--project DIR | --global] [GROUP|PLUGIN ...]
 #
-# GROUP is a marketplace category (core, platform) or "all". Defaults to "core".
+# GROUP is a marketplace category (core, platform, content) or "all". Defaults to "core".
 #
 # Examples:
 #   ./scripts/install.sh --project ~/code/my-app core vercel neon

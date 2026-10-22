@@ -15,8 +15,9 @@ My skills, plugins and MCP servers for coding agents, in one repo. It works with
 | Supabase | platform | [supabase/agent-skills](https://github.com/supabase/agent-skills) | `https://mcp.supabase.com/mcp` | `supabase` |
 | Linear | platform | | `https://mcp.linear.app/mcp` | `linear` |
 | GitHub | platform | | `https://api.githubcopilot.com/mcp/` | `github` |
+| HyperFrames (HeyGen) | content | [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | | `hyperframes` |
 
-**Core** is useful in every project. **Platform** is only worth turning on in projects that use that platform.
+**Core** is useful in every project. **Platform** is only worth turning on in projects that use that platform. **Content** is for making videos and other media.
 
 ## Install
 
@@ -28,7 +29,7 @@ This uses [`npx skills`](https://github.com/vercel-labs/skills), which copies sk
 curl -fsSL https://raw.githubusercontent.com/nguyeehub/claude-toolkit/main/scripts/install-skills.sh | bash -s -- core
 ```
 
-- **Choose groups or repos:** `core`, `platform`, `all`, or any repo from [`skills.txt`](skills.txt), e.g. `core supabase/agent-skills`.
+- **Choose groups or repos:** `core`, `platform`, `content`, `all`, or any repo from [`skills.txt`](skills.txt), e.g. `core supabase/agent-skills`.
 - **Choose agents:** add `--agent "cursor codex"`. The default is every agent `npx skills` supports.
 - **Install for every project** instead of the current one: add `--global`.
 

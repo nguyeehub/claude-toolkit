@@ -45,6 +45,16 @@
       "category": "core"
     },
     {
+      "name": "i-have-adhd",
+      "description": "Ayoub G.'s i-have-adhd skill: ADHD-friendly output, leading with the next action, numbered steps and no tangents. Run /i-have-adhd to turn it on.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ayghri/i-have-adhd.git"
+      },
+      "homepage": "https://github.com/ayghri/i-have-adhd",
+      "category": "core"
+    },
+    {
       "name": "hyperframes",
       "description": "HeyGen's HyperFrames skills: write HTML, render video. Compositions, animation, captions, voiceover, media and slideshows.",
       "source": {

@@ -10,6 +10,7 @@ My skills, plugins and MCP servers for coding agents, in one repo. It works with
 | Matt Pocock | core | [mattpocock/skills](https://github.com/mattpocock/skills) | | `mattpocock-skills` |
 | Emil Kowalski | core | [emilkowalski/skills](https://github.com/emilkowalski/skills) | | `emil-design-eng` |
 | Taste Skill | core | [`design-taste-frontend`](https://github.com/Leonxlnx/taste-skill) | | `taste-skill` |
+| i-have-adhd | core | [`i-have-adhd`](https://github.com/ayghri/i-have-adhd) | | `i-have-adhd` |
 | Vercel | platform | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | `https://mcp.vercel.com` | `vercel` |
 | Neon | platform | [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills) | `https://mcp.neon.tech/mcp` | `neon` |
 | Supabase | platform | [supabase/agent-skills](https://github.com/supabase/agent-skills) | `https://mcp.supabase.com/mcp` | `supabase` |
@@ -97,6 +98,7 @@ If an upstream change breaks something, pin it. For Claude Code, add `"sha": "<c
 
 ## Notes
 
+- `i-have-adhd` only runs when you type `/i-have-adhd`, and stays on until you say "stop adhd mode". To turn it on in every session, create `~/.claude/.i-have-adhd-always`; its plugin's SessionStart hook then loads the rules. Other agents get the skill only, not the hook.
 - Matt and Emil both ship a skill called `prototype`. Claude Code keeps both, as `mattpocock-skills:prototype` and `emil-design-eng:prototype`. In other agents, whichever installs last wins.
 - Some things are Claude Code-only, such as the Vercel plugin's hooks. Other agents get the skills and MCP servers.
 - Wispr Flow isn't here because it has no public plugin or skills. Connect it through your agent's connector or MCP settings.

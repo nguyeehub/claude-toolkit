@@ -8,6 +8,7 @@ nguyeehub/claude-toolkit   core
 mattpocock/skills          core
 emilkowalski/skills        core
 Leonxlnx/taste-skill       core      design-taste-frontend
+ayghri/i-have-adhd         core      i-have-adhd
 
 vercel-labs/agent-skills   platform
 neondatabase/agent-skills  platform
